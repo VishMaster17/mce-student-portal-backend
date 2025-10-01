@@ -32,7 +32,7 @@ app.use('/api/', limiter);
 
 // CORS configuration
 app.use(cors({
-  origin: ['http://localhost:8080', 'http://localhost:5173'],
+  origin: ['http://localhost:8080', 'http://localhost:5173', 'https://mce-student-portal-frontend.vercel.app'],
   credentials: true
 }));
 
