@@ -96,20 +96,27 @@ const getEvent = asyncHandler(async (req, res) => {
 // @route   POST /api/events
 // @access  Private/Admin
 const createEvent = asyncHandler(async (req, res) => {
-  const eventData = {
-    ...req.body,
-    createdBy: req.user.id
-  };
+  try {
+    const eventData = {
+      ...req.body,
+      createdBy: req.user.id
+    };
 
-  const event = await Event.create(eventData);
+    console.log('Creating event with data:', eventData);
 
-  await event.populate('createdBy', 'name email');
+    const event = await Event.create(eventData);
 
-  res.status(201).json({
-    success: true,
-    message: 'Event created successfully',
-    data: event
-  });
+    await event.populate('createdBy', 'name email');
+
+    res.status(201).json({
+      success: true,
+      message: 'Event created successfully',
+      data: event
+    });
+  } catch (error) {
+    console.error('Event creation error:', error);
+    throw error;
+  }
 });
 
 // @desc    Update event (Admin only)

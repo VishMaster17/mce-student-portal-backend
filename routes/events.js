@@ -38,6 +38,7 @@ const createEventValidation = [
       'Civil Engineering',
       'Electrical Engineering',
       'Information Technology',
+      'Information Science Engineering',
       'All Departments'
     ])
     .withMessage('Invalid department'),
@@ -90,6 +91,7 @@ const updateEventValidation = [
       'Civil Engineering',
       'Electrical Engineering',
       'Information Technology',
+      'Information Science Engineering',
       'All Departments'
     ])
     .withMessage('Invalid department'),
@@ -130,6 +132,7 @@ const getEventsValidation = [
       'Civil Engineering',
       'Electrical Engineering',
       'Information Technology',
+      'Information Science Engineering',
       'All Departments'
     ])
     .withMessage('Invalid department'),

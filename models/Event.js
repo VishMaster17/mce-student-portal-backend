@@ -34,6 +34,7 @@ const eventSchema = new mongoose.Schema({
       'Civil Engineering',
       'Electrical Engineering',
       'Information Technology',
+      'Information Science Engineering',
       'All Departments'
     ]
   },
